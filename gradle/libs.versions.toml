@@ -2,36 +2,71 @@
 agpVersion = "8.6.0"
 kotlinVersion = "1.9.0"
 kspVersion = "1.9.0-1.0.13"
+kaptVersion = "1.8.10"
 coroutinesVersion = "1.3.9"
 coreKtxVersion = "1.10.1"
 appcompatVersion = "1.6.1"
 materialVersion = "1.10.0"
 retrofitVersion = "2.11.0"
 roomVersion = "2.6.1"
-hiltVersion = "2.51"
+daggerVersion = "2.51.1"
+daggerSupportVersion = "2.27"
+daggerHiltNavigationVersion = "1.2.0"
+arrowVersion = "1.2.4"
+gsonVersion = "2.10.1"
+composeVersion = "1.7.5"
+compose3Version = "1.3.1"
+composeActivityVersion = "1.9.3"
+composeNavigationVersion = "2.8.4"
+logInterceptor = "4.9.0"
+activityVersion = "1.9.3"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtxVersion" }
 androidx-appcompat = { group = "androidx.appcompat", name = "appcompat", version.ref = "appcompatVersion" }
 material = { group = "com.google.android.material", name = "material", version.ref = "materialVersion" }
 
+compose-activity = { group = "androidx.activity", name = "activity-compose", version.ref = "composeActivityVersion" }
+compose-navigation = { group = "androidx.navigation", name = "navigation-compose", version.ref = "composeNavigationVersion" }
+compose-layout = { group = "androidx.compose.foundation", name = "foundation-layout", version.ref = "composeVersion" }
+compose-foundation = { group = "androidx.compose.foundation", name = "foundation", version.ref = "composeVersion" }
+compose-ui = { group = "androidx.compose.ui", name = "ui", version.ref = "composeVersion" }
+compose-ui-util = { group = "androidx.compose.ui", name = "ui-util", version.ref = "composeVersion" }
+compose-tooling = { group = "androidx.compose.ui", name = "ui-tooling", version.ref = "composeVersion" }
+compose-material = { group = "androidx.compose.material", name = "material", version.ref = "composeVersion" }
+compose-icon = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "composeVersion" }
+compose-material-three = { group = "androidx.compose.material3", name = "material3", version.ref = "compose3Version" }
+
+arrow-core = { module = "io.arrow-kt:arrow-core", version.ref = "arrowVersion" }
+arrow-fx-coroutines = { module = "io.arrow-kt:arrow-fx-coroutines", version.ref = "arrowVersion" }
+
 coroutines-android = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-android", version.ref = "coroutinesVersion" }
 coroutines = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "coroutinesVersion" }
 
 retrofit = { group = "com.squareup.retrofit2", name = "retrofit", version.ref = "retrofitVersion" }
+retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref = "retrofitVersion" }
+http-interceptor = { group = "com.squareup.okhttp3", name = "logging-interceptor", version.ref = "logInterceptor" }
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gsonVersion" }
 
 room = { group = "androidx.room", name = "room-runtime", version.ref = "roomVersion" }
 room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "roomVersion" }
 room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "roomVersion" }
 
-hilt = { module = "com.google.dagger:hilt-android", version.ref = "hiltVersion" }
-hilt-compiler = { module = "com.google.dagger:hilt-compiler", version.ref = "hiltVersion" }
-dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "hiltVersion" }
+dagger = { module = "com.google.dagger:dagger", version.ref = "daggerVersion" }
+dagger-compiler = { module = "com.google.dagger:dagger-compiler", version.ref = "daggerVersion" }
+dagger-android = { module = "com.google.dagger:dagger-android-support", version.ref = "daggerSupportVersion" }
+dagger-compiler-android = { module = "com.google.dagger:dagger-android-processor", version.ref = "daggerSupportVersion" }
+dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "daggerVersion" }
+dagger-hilt-compiler = { group = "com.google.dagger", name = "hilt-android-compiler", version.ref = "daggerVersion" }
+dagger-hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version.ref = "daggerHiltNavigationVersion" }
+androidx-activity = { group = "androidx.activity", name = "activity", version.ref = "activityVersion" }
+
 
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agpVersion" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlinVersion" }
+dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "daggerVersion" }
 ksp = { id = "com.google.devtools.ksp", version.ref = "kspVersion" }
-dagger-hilt = { id = "com.google.dagger.hilt.android", version.ref = "hiltVersion" }
+kapt = { id = "org.jetbrains.kotlin.kapt", version.ref = "kaptVersion" }
 

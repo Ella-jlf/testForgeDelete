@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">TestForgeSoft</string>
+
+    <!-- navigation -->
+    <string name="nav_currency">Currencies</string>
+    <string name="nav_favorites">Favorites</string>
+    <string name="nav_filters">Filters</string>
+
+    <!-- filters -->
+    <string name="sort_by">sort by</string>
+    <string name="sort_0">Code A-Z</string>
+    <string name="sort_1">Code Z-A</string>
+    <string name="sort_2">Quote Asc</string>
+    <string name="sort_3">Quote Desc</string>
+    <string name="apply">Apply</string>
 </resources>
